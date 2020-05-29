@@ -6,13 +6,13 @@
 
 ## PCの場合
 
-
-
  1．Google Docsに移動する．GoogleやClassroomのトップページから「Googleアプリ（右上の点9個のアイコン）」→「ドキュメント」を選択
 
 
 
-<img src="./pictures/スクリーンショット 2020-05-29 14.29.57.png" alt="スクリーンショット 2020-05-29 14.29.57" style="zoom:38%;" />
+![image-1](.\pictures\classroom1.png)
+
+
 
 
 
@@ -20,7 +20,9 @@
 
 
 
-<img src="./pictures/スクリーンショット 2020-05-29 14.31.30.png" alt="スクリーンショット 2020-05-29 14.31.30" style="zoom:38%;" />
+![image-2](.\pictures\classroom2.png)
+
+
 
 
 
@@ -28,7 +30,7 @@
 
 
 
-<img src="./pictures/スクリーンショット 2020-05-29 14.32.52.png" alt="スクリーンショット 2020-05-29 14.32.52" style="zoom:38%;" />
+![image-3](.\pictures\classroom3.png)
 
 
 
@@ -42,9 +44,7 @@
 
 
 
-<img src="./pictures/スクリーンショット 2020-05-29 14.37.32.png" alt="スクリーンショット 2020-05-29 14.37.32" style="zoom:38%;" />
-
-
+![image-4](.\pictures\classroom4.png)
 
 ※ファイル名のルールは統一しておくと，あとで見やすい．写真はよい例の一つ．
 
@@ -58,7 +58,9 @@
 
 
 
-<img src="./pictures/スクリーンショット 2020-05-29 14.37.47.png" alt="スクリーンショット 2020-05-29 14.37.47" style="zoom:38%;" />
+![image-5](.\pictures\classroom5.png)
+
+
 
 
 
@@ -102,9 +104,13 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
+
+
 3．Googleドキュメントのアプリを起動し，Classroomで使用しているアカウントでログインすると，トップページが表示される．
 
-<img src="./pictures/写真 2020-05-29 14 50 45.png" alt="写真 2020-05-29 14 50 45" style="zoom: 33%;" />
+
+
+![image-6](.\pictures\classroom6.png)
 
 
 
@@ -114,7 +120,11 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="./pictures/写真 2020-05-29 14 50 56.png" alt="写真 2020-05-29 14 50 56" style="zoom:33%;" />
+![image-7](.\pictures\classroom7.png)
+
+
+
+
 
 
 
@@ -122,9 +132,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="./pictures/写真 2020-05-29 14 53 12.png" alt="写真 2020-05-29 14 53 12" style="zoom:33%;" />
-
-
+![image-8](.\pictures\classroom8.png)
 
 ※ファイル名のルールは統一しておくと，あとで見やすい．写真はよい例の一つ．
 
@@ -138,7 +146,9 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="./pictures/写真 2020-05-29 14 54 04.png" alt="写真 2020-05-29 14 54 04" style="zoom:33%;" />
+![image-9](.\pictures\classroom9.png)
+
+
 
 
 
@@ -146,7 +156,9 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="./pictures/写真 2020-05-29 14 54 34.png" alt="写真 2020-05-29 14 54 34" style="zoom:33%;" />
+![image-10](.\pictures\classroom10.png)
+
+
 
 
 
@@ -154,7 +166,9 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="./pictures/写真 2020-05-29 14 54 56.png" alt="写真 2020-05-29 14 54 56" style="zoom:33%;" />
+![image-11](.\pictures\classroom11.png)
+
+
 
 
 
@@ -162,7 +176,9 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="./pictures/写真 2020-05-29 14 55 03.png" alt="写真 2020-05-29 14 55 03" style="zoom:33%;" />
+![image-12](.\pictures\classroom12.png)
+
+
 
 
 
@@ -170,7 +186,9 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="./pictures/写真 2020-05-29 14 55 16.png" alt="写真 2020-05-29 14 55 16" style="zoom:33%;" />
+![image-13](.\pictures\classroom13.png)
+
+
 
 
 
@@ -178,7 +196,9 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="./pictures/写真 2020-05-29 14 55 28.png" alt="写真 2020-05-29 14 55 28" style="zoom:33%;" />
+![image-14](.\pictures\classroom14.png)
+
+
 
 
 
