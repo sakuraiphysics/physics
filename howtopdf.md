@@ -12,7 +12,7 @@
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\スクリーンショット 2020-05-29 14.29.57.png" alt="スクリーンショット 2020-05-29 14.29.57" style="zoom:38%;" />
+<img src="./pictures/スクリーンショット 2020-05-29 14.29.57.png" alt="スクリーンショット 2020-05-29 14.29.57" style="zoom:38%;" />
 
 
 
@@ -20,7 +20,7 @@
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\スクリーンショット 2020-05-29 14.31.30.png" alt="スクリーンショット 2020-05-29 14.31.30" style="zoom:38%;" />
+<img src="./pictures/スクリーンショット 2020-05-29 14.31.30.png" alt="スクリーンショット 2020-05-29 14.31.30" style="zoom:38%;" />
 
 
 
@@ -28,7 +28,7 @@
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\スクリーンショット 2020-05-29 14.32.52.png" alt="スクリーンショット 2020-05-29 14.32.52" style="zoom:38%;" />
+<img src="./pictures/スクリーンショット 2020-05-29 14.32.52.png" alt="スクリーンショット 2020-05-29 14.32.52" style="zoom:38%;" />
 
 
 
@@ -42,7 +42,7 @@
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\スクリーンショット 2020-05-29 14.37.32.png" alt="スクリーンショット 2020-05-29 14.37.32" style="zoom:38%;" />
+<img src="./pictures/スクリーンショット 2020-05-29 14.37.32.png" alt="スクリーンショット 2020-05-29 14.37.32" style="zoom:38%;" />
 
 
 
@@ -58,7 +58,7 @@
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\スクリーンショット 2020-05-29 14.37.47.png" alt="スクリーンショット 2020-05-29 14.37.47" style="zoom:38%;" />
+<img src="./pictures/スクリーンショット 2020-05-29 14.37.47.png" alt="スクリーンショット 2020-05-29 14.37.47" style="zoom:38%;" />
 
 
 
@@ -104,7 +104,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 3．Googleドキュメントのアプリを起動し，Classroomで使用しているアカウントでログインすると，トップページが表示される．
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 50 45.png" alt="写真 2020-05-29 14 50 45" style="zoom: 33%;" />
+<img src="./pictures/写真 2020-05-29 14 50 45.png" alt="写真 2020-05-29 14 50 45" style="zoom: 33%;" />
 
 
 
@@ -114,7 +114,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 50 56.png" alt="写真 2020-05-29 14 50 56" style="zoom:33%;" />
+<img src="./pictures/写真 2020-05-29 14 50 56.png" alt="写真 2020-05-29 14 50 56" style="zoom:33%;" />
 
 
 
@@ -122,7 +122,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 53 12.png" alt="写真 2020-05-29 14 53 12" style="zoom:33%;" />
+<img src="./pictures/写真 2020-05-29 14 53 12.png" alt="写真 2020-05-29 14 53 12" style="zoom:33%;" />
 
 
 
@@ -138,7 +138,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 54 04.png" alt="写真 2020-05-29 14 54 04" style="zoom:33%;" />
+<img src="./pictures/写真 2020-05-29 14 54 04.png" alt="写真 2020-05-29 14 54 04" style="zoom:33%;" />
 
 
 
@@ -146,7 +146,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 54 34.png" alt="写真 2020-05-29 14 54 34" style="zoom:33%;" />
+<img src="./pictures/写真 2020-05-29 14 54 34.png" alt="写真 2020-05-29 14 54 34" style="zoom:33%;" />
 
 
 
@@ -154,7 +154,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 54 56.png" alt="写真 2020-05-29 14 54 56" style="zoom:33%;" />
+<img src="./pictures/写真 2020-05-29 14 54 56.png" alt="写真 2020-05-29 14 54 56" style="zoom:33%;" />
 
 
 
@@ -162,7 +162,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 55 03.png" alt="写真 2020-05-29 14 55 03" style="zoom:33%;" />
+<img src="./pictures/写真 2020-05-29 14 55 03.png" alt="写真 2020-05-29 14 55 03" style="zoom:33%;" />
 
 
 
@@ -170,7 +170,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 55 16.png" alt="写真 2020-05-29 14 55 16" style="zoom:33%;" />
+<img src="./pictures/写真 2020-05-29 14 55 16.png" alt="写真 2020-05-29 14 55 16" style="zoom:33%;" />
 
 
 
@@ -178,7 +178,7 @@ Google Play: https://play.google.com/store/apps/details?id=com.google.android.ap
 
 
 
-<img src="C:\Users\pas2_\Pictures\classroom6\写真 2020-05-29 14 55 28.png" alt="写真 2020-05-29 14 55 28" style="zoom:33%;" />
+<img src="./pictures/写真 2020-05-29 14 55 28.png" alt="写真 2020-05-29 14 55 28" style="zoom:33%;" />
 
 
 
