@@ -103,7 +103,7 @@ $$
 
 
 
-<img src="C:\Users\pas2_\Documents\project\physics\pictures\sankakuhigraphtan.png" alt="sankakuhigraphtan" style="zoom: 18%;" />
+<img src=".\pictures\sankakuhigraphtan.png" alt="sankakuhigraphtan" style="zoom: 18%;" />
 
 
 
