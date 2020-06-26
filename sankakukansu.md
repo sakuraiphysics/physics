@@ -142,7 +142,7 @@ $$
 
 
 
-![image-20200511025026902](.\pictures\image-20200511025026902.png)
+<img src=".\pictures\image-20200511025026902.png" alt="image-20200511025026902" style="zoom:33%;" />
 
 　点Oは原点，点Pはx軸から角 $\theta$ に半径 $r$ だけ伸ばした線分の先の点，そして点Rはそこから下ろした垂線とx軸が交わる点とする．このように書くと，先程決めた $r,　x,　y$ は，円の半径 $r$ および点Pの $(x, y)$ に対応することになる．
 
@@ -158,13 +158,13 @@ https://www.geogebra.org/m/wrkqkxru
 
 　この時，$\theta$ に対する $\sin\theta$ や $\cos\theta$ の値は以下の通りとなる．（前述の三角比のグラフが $\theta$ 方向に拡張されているのがわかるだろうか．）
 
-![sankakukansugraph](.\pictures\sankakukansugraph.png)
+<img src=".\pictures\sankakukansugraph.png" alt="sankakukansugraph" style="zoom:25%;" />
 
 
 
 なお，$\tan\theta$ は次の通り．
 
-![sankakukansugraphtan](.\pictures\sankakukansugraphtan.png)
+<img src=".\pictures\sankakukansugraphtan.png" alt="sankakukansugraphtan" style="zoom:25%;" />
 
 
 
