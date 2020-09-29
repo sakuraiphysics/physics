@@ -14,7 +14,7 @@
 
 | ベクトル量                                                   | スカラー量                                                   |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 力 $\overrightarrow{F}$  〔N〕<br />位置 $\overrightarrow{s}, \overrightarrow{x}, \overrightarrow{y}$  〔m〕<br />速度 $\overrightarrow{v}$ 〔m/s〕<br />加速度 $\overrightarrow{a}$ 〔m/s〕<br />電場 $\overrightarrow{E}$ 〔V/m〕 | 質量 $m$ 〔kg〕<br />体積 $V$ 〔〕<br />長さ $s$ 〔m〕<br />速さ $v$ 〔m/s〕<br />温度 $T$ 〔K〕<br />電気量 $q$ 〔C〕 |
+| 力 $\overrightarrow{F}\;〔\mathrm{N}〕$<br />位置 $\overrightarrow{s}, \overrightarrow{x}, \overrightarrow{y}\;〔\mathrm{m}〕$ <br />速度 $\overrightarrow{v}$ 〔m/s〕<br />加速度 $\overrightarrow{a}$ 〔m/s〕<br />電場 $\overrightarrow{E}$ 〔V/m〕 | 質量 $m$ 〔kg〕<br />体積 $V$ 〔m3〕<br />長さ $s$ 〔m〕<br />速さ $v$ 〔m/s〕<br />温度 $T$ 〔K〕<br />電気量 $q$ 〔C〕 |
 
 
 
@@ -38,7 +38,7 @@
 
 
 
-![スクリーンショット 2020-05-09 11.22.28](C:\Users\pas2_\Dropbox\スクリーンショット\スクリーンショット 2020-05-09 11.22.28.png)
+![vectorone](./pictures/vectorsum.png)
 
 
 
@@ -76,7 +76,7 @@
 
 
 
-![スクリーンショット 2020-05-09 11.24.35](C:\Users\pas2_\Dropbox\スクリーンショット\スクリーンショット 2020-05-09 11.24.35.png)
+![vectorsum](./pictures/vectorsum.png)
 
 
 
@@ -86,7 +86,7 @@
 
 
 
-![スクリーンショット 2020-05-09 11.38.44](C:\Users\pas2_\Dropbox\スクリーンショット\スクリーンショット 2020-05-09 11.38.44.png)
+![vectordif](./pictures/vectordif.png)
 
 
 
@@ -94,7 +94,7 @@
 
 
 
-![スクリーンショット 2020-05-09 11.39.43](C:\Users\pas2_\Dropbox\スクリーンショット\スクリーンショット 2020-05-09 11.39.43.png)
+![vectordif2](./pictures/vectordif2.png)
 
 
 
@@ -120,7 +120,7 @@ https://phet.colorado.edu/ja/simulation/vector-addition
 
 
 
-![スクリーンショット 2020-05-09 13.34.00](C:\Users\pas2_\Dropbox\スクリーンショット\スクリーンショット 2020-05-09 13.34.00.png)
+![vectordivide](./pictures/vectordivide.png)
 
 
 
