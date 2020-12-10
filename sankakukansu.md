@@ -40,7 +40,7 @@ $ \angle \alpha=30^\circ, \angle B=90^\circ $ であるとき，$ BC:CA:AB=1:2:\
 
 $ \angle \beta=45^\circ, \angle E=90^\circ $ であるとき，$ DE:EF:FD=1:1:\sqrt{2} $
 
-（geogebraの仕様により正しく表示されないが，図のα，β（立体）は，正しくは $\alpha, \beta$ （斜体）である．）
+（geogebraの仕様により正しく表示されないが，図のα，β（立体）は，正しくは $\alpha, \beta$ （斜体）で記すべきである．）
 
 　
 
@@ -52,7 +52,7 @@ $ \angle \beta=45^\circ, \angle E=90^\circ $ であるとき，$ DE:EF:FD=1:1:\s
 
 <img src=".\pictures\image-20200511004923510.png" alt="image-20200511004923510" style="zoom:33%;" />
 
-（geogebraの仕様により $\theta$ がθと表記されているので注意．）
+（やはりgeogebraの仕様により $\theta$ がθと表記されているので注意．）
 
 　この時の頂点，辺にそれぞれ名前をつけよう．角 $\theta$ のある頂点をO，直角のある頂点をR，もう一つをPとする．また，斜辺の長さをを $r$ ，横に伸びたORの長さを $x$ ，縦に伸びたPRの長さを $y$ とする．つまり下図のように名前をつける．
 
