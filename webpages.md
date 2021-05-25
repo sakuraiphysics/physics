@@ -38,6 +38,14 @@ https://www.nhk.or.jp/rika/karasu/
 
 
 
+#### テキシコー
+
+「コンピューターを使わずにプログラミング的思考を育む」番組。分解、組み合わせ、一般化、抽象化、シミュレーションという5つのプログラミング的思考を鍛える。
+
+https://www.nhk.or.jp/school/sougou/texico/
+
+
+
 #### ロンリのちから
 
 https://www.nhk.or.jp/kokokoza/tv/ronri/
