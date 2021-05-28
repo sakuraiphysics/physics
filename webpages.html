@@ -1,0 +1,608 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-fences-math .MathJax_SVG_Display, .md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: visible; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; zoom: 90%; }
+#math-inline-preview-content { zoom: 1.1; }
+.MathJax_SVG * { transition: none; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-math .MathJax_SVG_Display { margin-top: 8px; cursor: default; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>webpages</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='物理webページリンク集'><span>物理　Webページリンク集</span></h1><p><span>　要するに私が勧める・使ってるWebページやサービスへのリンク集。特に物理に関するものを抜粋。逐次追加とかしていきます。</span></p><p>&nbsp;</p><h2 id='物理の学習に役立つサイト'><span>物理の学習に役立つサイト</span></h2><h4 id='nhk高校講座物理基礎'><span>NHK高校講座　物理基礎</span></h4><p><a href='https://www.nhk.or.jp/kokokoza/tv/butsurikiso/' target='_blank' class='url'>https://www.nhk.or.jp/kokokoza/tv/butsurikiso/</a></p><p><span>さらっと視聴するだけで物理基礎で学ぶ概念がだいたいわかる映像コンテンツ。全編動画で見られます。見ておくだけで勉強がちょっと楽になるかも。物理家（ものりけ）のお父さんは有名な、実験バリバリの物理の先生。お母さんは初代スケバン刑事。</span></p><p>&nbsp;</p><h4 id='phet'><span>PhET</span></h4><p><a href='https://phet.colorado.edu/ja/' target='_blank' class='url'>https://phet.colorado.edu/ja/</a></p><p><span>コロラド大学ボルダー校が公開している、科学・数学のシミュレーション群。多くのシミュレーションは変数を自分で設定したり動かしたりできる点で、見るだけの動画コンテンツと違う。物理の学習は、本とかノートとか見るだけじゃなくて、自分でいろいろ動かしてみた方がわかりやすいこともたくさんある。全部英語です。</span></p><p>&nbsp;</p><h4 id='physlet'><span>Physlet</span></h4><p><a href='https://www.compadre.org/Physlets/' target='_blank' class='url'>https://www.compadre.org/Physlets/</a></p><p><span>W. Christian と M. Belloni が編纂する物理コンテンツ・アプレット等の教材群。AAPT ComPADREのサーバ上にて公開されている。（AAPTはAmerican Association of Physics Teachersという米国の物理教育に関する学会。）単元ごとに解説や関連する実験などが系統的にまとめられていてわかりやすい一方、PhETと違い「触れず見るだけ」のコンテンツ等も多くある印象。もち全部英語です。英語読めるといいね。</span></p><p>&nbsp;</p><h4 id='考えるカラス'><span>考えるカラス</span></h4><p><a href='https://www.nhk.or.jp/rika/karasu/' target='_blank' class='url'>https://www.nhk.or.jp/rika/karasu/</a></p><p><span>「科学的思考」を鍛える番組。理科の先生でも最初は唸るような「え、マジ？」な現象がいっぱい出てくる。なんでそうなるのかは教えてくれない。自分で観察して、仮説を立て、実験して、考察しよう。</span></p><p>&nbsp;</p><h4 id='テキシコー'><span>テキシコー</span></h4><p><span>「コンピューターを使わずにプログラミング的思考を育む」番組。分解、組み合わせ、一般化、抽象化、シミュレーションという5つのプログラミング的思考を鍛える。ダンドリオンがかわいい。「効率が悪い！！」</span></p><p><a href='https://www.nhk.or.jp/school/sougou/texico/' target='_blank' class='url'>https://www.nhk.or.jp/school/sougou/texico/</a></p><p>&nbsp;</p><h4 id='ロンリのちから'><span>ロンリのちから</span></h4><p><a href='https://www.nhk.or.jp/kokokoza/tv/ronri/' target='_blank' class='url'>https://www.nhk.or.jp/kokokoza/tv/ronri/</a></p><p><span>論理的思考力（クリティカル・シンキング）を鍛える番組。学術的に文章を書くためには必須の能力。正しく話す・聞く、詭弁に陥らない・騙されないために。</span></p><p>&nbsp;</p><h4 id='youtube'><span>YouTube</span></h4><p><a href='https://www.youtube.com/?gl=JP' target='_blank' class='url'>https://www.youtube.com/?gl=JP</a></p><p><span>ここで紹介するサイトか？ と思われるかもしれないが･･･サイエンスに関する動画もたくさんある。本当にたくさんある。</span></p><p>&nbsp;</p><h2 id='調べるために使うサイト'><span>調べるために使うサイト</span></h2><h3 id='論文検索'><span>論文検索</span></h3><h4 id='j-stage'><span>J-STAGE</span></h4><p><a href='https://www.jstage.jst.go.jp/browse/-char/ja' target='_blank' class='url'>https://www.jstage.jst.go.jp/browse/-char/ja</a></p><p><span>JST（国立研究開発法人 科学技術振興機構）のジャーナルプラットフォーム。日本の論文はとりあえずここで検索しろその1。</span></p><p>&nbsp;</p><h4 id='ciniiサイニィ）'><span>cinii（サイニィ）</span></h4><p><a href='https://ci.nii.ac.jp' target='_blank' class='url'>https://ci.nii.ac.jp</a></p><p><span>NII（国立情報学研究所）のジャーナルプラットフォーム。日本の論文はとりあえずここで検索しろその2。</span></p><p>&nbsp;</p><h3 id='その他の調べ物をするサイト'><span>その他の調べ物をするサイト</span></h3><h4 id='google'><span>Google</span></h4><p><a href='https://www.google.com/?hl=ja' target='_blank' class='url'>https://www.google.com/?hl=ja</a></p><p><span>Google it! （ググれ！）</span></p><p>&nbsp;</p><h4 id='wikipedia日本語）'><span>Wikipedia（日本語）</span></h4><p><a href='https://ja.wikipedia.org/' target='_blank' class='url'>https://ja.wikipedia.org/</a></p><p><span>言わずと知れたインターネット百科事典。ただ、編集者はボランティアなので、全ての記事が手放しに信頼できるものではないと心得よ。「Wikipediaで信用できるのは、星付きと鉄道に関する記事だけである。専門分野の記事は、間違っても鵜呑みにしないこと。」</span></p><p>&nbsp;</p><h4 id='地理院地図'><span>地理院地図</span></h4><p><a href='https://maps.gsi.go.jp/' target='_blank' class='url'>https://maps.gsi.go.jp/</a></p><p><span>国土地理院の地図サービス。場所や道や行き方を調べる時にはGoogle Mapsを使うけど、日本国内の地形について、詳細に計測したり地図上に作図したりする時にはこっちを使う。</span></p><p>&nbsp;</p><h4 id='国土地理院重力・ジオイド'><span>国土地理院　重力・ジオイド</span></h4><p><a href='https://www.gsi.go.jp/buturisokuchi/grageo_index.html' target='_blank' class='url'>https://www.gsi.go.jp/buturisokuchi/grageo_index.html</a></p><p><span>国土地理院のウェブサイト内。重力に関することがまとまっている。重力値推定サービスはここ→ </span><a href='https://vldb.gsi.go.jp/sokuchi/gravity/calc/gravity.pl' target='_blank' class='url'>https://vldb.gsi.go.jp/sokuchi/gravity/calc/gravity.pl</a><span> </span></p><p>&nbsp;</p><h4 id='deepl翻訳'><span>DeepL翻訳</span></h4><p><a href='https://www.deepl.com/translator' target='_blank' class='url'>https://www.deepl.com/translator</a></p><p><span>ディープラーニングを応用した機械翻訳サービス。現時点で最も高精度な翻訳ができるサイトだと思う。どうしても読めなくて困ったときには使うとよいでしょう。間違っても英語の和訳課題をこいつで済ませよう、なんて考えないように！</span></p><p>&nbsp;</p><h2 id='レポートや発表スライドをつくるときに使うサイト'><span>レポートや発表スライドをつくるときに使うサイト</span></h2><h4 id='水魚堂の回路図エディタ'><span>水魚堂の回路図エディタ</span></h4><p><a href='https://www.suigyodo.com/online/schsoft.htm' target='_blank' class='url'>https://www.suigyodo.com/online/schsoft.htm</a></p><p><span>回路図を作るときに使うソフト。単に回路図を作るだけなら、シンプルで素子の編集も容易なこのソフトが一番いいかも。さらに実用的なソフトとして、ブレッドボードに回路を作る時の繋ぎ方まで考えるならFritzing、しっかりした基板エディタまでついたものならEAGLEなどがあります。</span></p><p>&nbsp;</p><h4 id='texclip'><span>TeXclip</span></h4><p><a href='https://texclip.marutank.net' target='_blank' class='url'>https://texclip.marutank.net</a></p><p><span>TeX数式画像ジェネレータ。WordやDocsでちゃんとした数式書きたいんだけどどうしよう？ という時に使える。（言い換えれば、Wordのフォントや数式機能では、きれいな数式をパパッと書くことができない！！）多少面倒だが、TeXのきれいな数式を作成して、画像ファイルとして保存できる。TeX数式の書き方は「TeX 数式」あたりで検索。慣れるとTeX記法のほうが速い。</span></p><p>&nbsp;</p><h4 id='フキダシデザイン'><span>フキダシデザイン</span></h4><p><a href='https://fukidesign.com' target='_blank' class='url'>https://fukidesign.com</a></p><p><span>PowerpointやSlidesの図形にあるフキダシはかっこ悪いので、フキダシを入れたいときにはだいたいここを使わせていただいてます。</span></p><p>&nbsp;</p><h4 id='いらすとや'><span>いらすとや</span></h4><p><a href='https://www.irasutoya.com' target='_blank' class='url'>https://www.irasutoya.com</a></p><p><span>あんまり多様すると、資料やスライドをカジュアルにしすぎるのでよくないと思うけど、必要な時に……。</span></p><p>&nbsp;</p><p>&nbsp;</p><h2 id='ソフト・app'><span>ソフト・App</span></h2><h3 id='科学関係'><span>科学関係</span></h3><h4 id='geogebra'><span>Geogebra</span></h4><p><a href='https://www.geogebra.org/?lang=ja' target='_blank' class='url'>https://www.geogebra.org/?lang=ja</a></p><p><span>フリーソフト。主にグラフ描画を得意とする数学ソフトウェア。式を突っ込むだけでグラフがポンと表示される。幾何、代数、解析的な問題を、複雑な言語を習得することなく扱えるのがよい。高校数学ならこれで何でもできるんじゃなかろうか。科学の学習ツールとして利用するなら統合版がおすすめ。</span></p><p><span>何だって？ とりあえずその数学の問題の答えを教えてくれればそれでいいって？ それならこいつに聞いてみたらどうかな。→ </span><a href='https://ja.wolframalpha.com' target='_blank' class='url'>https://ja.wolframalpha.com</a></p><p>&nbsp;</p><h4 id='octave'><span>Octave</span></h4><p><a href='https://www.gnu.org/software/octave/' target='_blank' class='url'>https://www.gnu.org/software/octave/</a></p><p><span>フリーの数値解析ソフト。Excelが汎用の計算ソフトだとしたら、これは理数系に特化した解析用・グラフ作成用ソフト。MATLAB（有償）と高い互換性があるのが特徴。測定により得たデータなどをグラフ化したりフィッティングしたりするのはExcelでもまあまあできるけど･･･こちらを扱う訓練をしておくとよい。理系に進むならMATLABスキルの修得は特急券だと思う。理工学部を持つ大学ではMATLABのライセンスを学生に付与していることが多いので、使えるとつよい。</span></p><p>&nbsp;</p><h4 id='r'><span>R</span></h4><p><a href='https://www.r-project.org' target='_blank' class='url'>https://www.r-project.org</a></p><p><span>フリーの統計解析に特化したプログラミング言語とその基本的な開発環境。もちろん大学の研究などでも利用されている。基本的な統計処理・検定・グラフ描画などができる。科学では測定データを統計的に扱うことは必須なので、やはり使えるとつよい。</span></p><p>&nbsp;</p><h4 id='rstudio'><span>RStudio</span></h4><p><a href='https://rstudio.com' target='_blank' class='url'>https://rstudio.com</a></p><p><span>フリーのR言語IDE（統合開発環境）。実際にRを使うならRStudioでやるのがいいと思う。コンソールだけではなく各種ビューアが並んで表示されるので、R単体より便利。</span></p><p>&nbsp;</p><h3 id='その他いくつか'><span>その他いくつか</span></h3><h4 id='atom'><span>Atom</span></h4><p><a href='https://atom.io' target='_blank' class='url'>https://atom.io</a></p><p><span>Githubが作ったテキストエディタ。現在のプログラマ向けテキストエディタの第1選択だと思う。ファイルエクスプローラ（ツリービュー）、多言語のシンタックスハイライト機能のみならず、様々な機能のプラグインが公開されており、ボタン一つでインストールして機能追加が可能。普段使いにもよい。Emacsやvi、vimをこよなく愛する脳味噌がサーバサイドにある人や、MIFESや秀丸などの有償テキストエディタを使う人でなければmac、windows問わずどなたにもおすすめ。</span></p><p><span>「Windowsユーザーの諸君、メモ帳だけではダメだ。手足のように使えるテキストエディタを1つは持っておけ。」</span></p><p>&nbsp;</p><h4 id='typora'><span>Typora</span></h4><p><a href='https://typora.io' target='_blank' class='url'>https://typora.io</a></p><p><span>シンプルな静的Webページを簡単に書けるmarkdownエディタ。もちろんhtmlでのエクスポートも可能です。（このページもTyporaで書いてます。）LaTex書式できれいな数式も書けるし、スニペットも書けるので、数式を伴う理数系やコードを含む情報系の文書をサクッと小綺麗に作りたいときに便利。これに比べてWord君の数式機能は本当にダメな奴でため息がでちゃう。</span></p><p>&nbsp;</p><h4 id='vivaldi'><span>Vivaldi</span></h4><p><a href='https://vivaldi.com/ja/download/' target='_blank' class='url'>https://vivaldi.com/ja/download/</a></p><p><span>Vivaldi Technologiesによる高機能ウェブブラウザ。強力かつ軽量。訳あってフォン・テッツナーがOpera社を辞めて作ったソフト。Chromeと概ね同様の機能を持ちながら、様々な機能が追加されている。また、Chromeの機能拡張が利用可能。2019年の世界ブラウザシェアランキングは15位、利用率は0.10%。</span></p><p>&nbsp;</p><h4 id='zoom'><span>Zoom</span></h4><p><a href='https://zoom.us' target='_blank' class='url'>https://zoom.us</a></p><p><span>Webミーティングサービス。有料アカウントと無料アカウント（主にホスト時に機能制限）がある。新型コロナウイルス感染症のせいというか、おかげというか……。よく使うようになりましたね。</span></p></div></div>
+</body>
+</html>
