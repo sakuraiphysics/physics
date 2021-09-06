@@ -1,0 +1,625 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857143; overflow-x: hidden; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; tab-size: 4; background-position: inherit; background-repeat: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; word-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) { 
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font-family: inherit; font-size: inherit; font-style: inherit; font-variant-caps: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-top-left-radius: 4px; border-top-right-radius: 4px; border-bottom-right-radius: 4px; border-bottom-left-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right-width: 0px; background-color: inherit; }
+.CodeMirror-linenumber { }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; position: relative !important; background-position: inherit; background-repeat: inherit; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; background-position: 0px 0px; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print { 
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background-color: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) { 
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background-color: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; }
+a.md-print-anchor { white-space: pre !important; border: none !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; text-shadow: initial !important; background-position: 0px 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom-width: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background-color: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print { 
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix { height: auto; margin-top: 16px; margin-bottom: 16px; }
+.md-require-zoom-fix foreignObject { font-size: var(--mermaid-font-zoom); }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background-image: inherit; background-size: inherit; background-attachment: inherit; background-origin: inherit; background-clip: inherit; background-color: inherit; background-position: inherit; background-repeat: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) { 
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) { 
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.428571429rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ''; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ''; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left-width: 28px; border-left-style: solid; border-left-color: transparent; border-right-width: 28px; border-right-style: solid; border-right-color: transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ''; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right-width: 8px; border-right-style: solid; border-right-color: transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: '−'; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+/*.html-for-mac {
+    --item-hover-bg-color: #E6F0FE;
+}*/
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+    opacity: 0.4;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+.menu-item-container a.menu-style-btn {
+    background-color: #f5f8fa;
+    background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
+}
+
+
+ :root {--mermaid-font-zoom:1em ;}  @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
+</style><title>solderingitems</title>
+</head>
+<body class='typora-export'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='オススメはんだごてとはんだ付け環境の話'><span>オススメはんだごてと、はんだ付け環境の話</span></h1><p><span>ここでは、私が一般的な電子工作向けにおすすめするはんだごての紹介と、その理由についてお話します。</span></p><p>&nbsp;</p><h2 id='まず始めに'><span>まず始めに……</span></h2><p><span>「はんだ付けってむずかしい、失敗する、うまくきれいにできない」という人にお伝えしたいことがあります。</span><strong><span>それは技術の問題ではなく、道具のせいです。</span></strong><span>大事なことは以下のサイトに詳しくまとめられているので、ご覧ください。</span></p><p>&nbsp;</p><p><a href='https://godhanda.co.jp/blog/kisokouza07/' target='_blank' class='url'>https://godhanda.co.jp/blog/kisokouza07/</a></p><p>&nbsp;</p><p><span>ここで説明したいことを一言でまとめると、「はんだごての最初の一本目は、セラミックヒーター式サーモスタット付きはんだごてを買いましょう」ということです。「高い方を買え！」みたいな話をすると、なんだ回し者か？ とも思われるかもしれませんが……ニクロム式のこてはやめて、サーモスタットがついたセラミックヒーター式のはんだごてを使った方がよいというのは、</span><strong><span>断言できます。</span></strong></p><p>&nbsp;</p><h2 id='新旧はんだごてをざっくりと比較すると'><span>新旧はんだごてをざっくりと比較すると</span></h2><p><span>簡単にまとめると、古いニクロムヒーター式のはんだごては……</span></p><ul><li><span>温度が上がるのがとても遅く、必要な時にすぐ使えない。そのくせ放置しておくと加熱しすぎてこて先が焦げる。</span></li><li><span>大量の作業を行うには熱回復が遅く、大きな端子などを連続ではんだ付けする時には、こて先の温度回復を待つ必要がある。</span></li><li><span>少量の作業時には、濡らしたスポンジで温度を下げながら使うが、そのさじ加減が職人芸。温度が高すぎるとフラックスが一瞬で蒸発。低すぎるとはんだが溶けない。</span></li><li><span>無鉛はんだを扱うのはさらに難しく、もう手に負えない。</span></li></ul><p><span>というものであり、上手なはんだ付けができなくて当たり前の道具です。（市販の商品をやたらとDisるのはあまり行儀良くないと私も思いますが……事実、実験室や準備室にある旧式はんだごては、みんなこて先が真っ黒焦げになって、うち捨てられているでしょう？）</span></p><p>&nbsp;</p><p><span>一方で最近の、サーモスタットがついたセラミックヒーター式のはんだごては……</span></p><ul><li><span>温度上昇・回復が圧倒的に早く、つないで1分程度ですぐ作業が可能。</span></li><li><span>サーモスタットで決まった温度を維持するため、加熱しすぎることもないため、こて先劣化を抑えられる。</span></li><li><span>必ず適切な温度で作業ができ、質のよいはんだ付けが誰でも可能。</span></li></ul><p><span>上記のように、職人芸を身につけた一部の人しかまともに使えなかったものが、誰でも上手に使える道具に大きく進化しています。私も、</span><strong><span>旧式のこてでは、新型のこてと同じ質のはんだ付けは絶対にできません。</span></strong></p><p>&nbsp;</p><h2 id='おすすめのはんだごて'><span>おすすめのはんだごて</span></h2><p><span>さて、ではどれを用意すればいいのか。特にオススメは</span></p><ul><li><span>HAKKOのFX-600（実売価格4000円くらい、温度調節式、50W）</span>
+<a href='https://www.hakko.com/japan/products/hakko_fx600.html' target='_blank' class='url'>https://www.hakko.com/japan/products/hakko_fx600.html</a></li></ul><p><span>です。迷ったらこれでいいと思います。</span><strong><span>温度調節ボリュームを手で回せる</span></strong><span>ことが特徴で、使わないときはダイヤルを回して低い温度に設定しておくことができます。</span><strong><span>200℃でスタンバイさせておいて、使用時に320℃や370℃に上げる</span></strong><span>ようにすれば、こて先の劣化を最小限にして、ストレスなく作業が可能です。</span></p><p>&nbsp;</p><p><span>次点では、以下のものがオススメできます。</span></p><ul><li><span>gootのPX-201（実売価格3600円くらい、温度調節式、70W）</span></li><li><span>gootのPX-335（実売価格3600円くらい、350℃固定式、85W）</span></li></ul><p><span>PX-201は温度調節式ですが、</span><strong><span>温度調節ボリュームを回すのにマイナスドライバーが必要</span></strong><span>です。作業机にドライバーがあってすぐ使える環境ならばこちらでもいいと思います。250℃でスタンバイし、350℃で作業しましょう。350℃固定式のPX-335も、温度を下げておくことはできませんが、必要以上に高温にならず温度を維持してくれるので、作業性はよさそうです。最近出たHAKKOのDASH（型番FX-650-8X）は、実売1200円前後と安価で、ニクロム式より温度の立ち上がりはよいのですが……それでも15Wと非力であり、サーモスタットも無いためおすすめできません。</span></p><p>&nbsp;</p><h2 id='もっと高価なステーション型もあるけれど'><span>もっと高価なステーション型もあるけれど……</span></h2><p><span>さて、高いほうがよいのなら、これまでに紹介したような、回路が手元に内蔵されている（手元内蔵式と呼ぶことにしましょう）温調はんだごてより、さらに高価なステーション型のはんだごてを使った方がよいのか、という話ですが、これは必ずしも必要ではありません。手元内蔵式温調ごてに対してステーション型が優位である点を列挙します。</span></p><ul><li><span>チップの熱容量がもっと大きい</span>
+<span>大抵、こて先の金属部が大きい。その分熱容量が大きく、はんだを溶かした際の温度低下が小さい。</span></li><li><span>温度の回復がさらに早い</span>
+<span>ステーション側に大きな回路を組めるため、出力が大きく、熱が速やかに供給されるため指定の温度まですぐに回復する。</span></li><li><span>回路がステーション側にある分、こて部がスマートで軽量</span>
+<span>整流や変圧を行う回路をステーション側に押しつけられるため、こて内部にはヒーターのみを置けばよい。</span></li><li><span>こてにぶら下がるコードの取り回しが容易</span>
+<span>手元内蔵式の場合、ぶら下がるコードはAC100Vのプラグに伸びるコードである。できるだけ柔らかいコードを採用しているが、それでも硬さがある。ステーション型のこてとステーション間のコードは柔らかい同軸ケーブルで、極めて取り回しが良い。</span></li></ul><p><span>しかし、最近の手元内蔵式はとてもよくできています。熱容量も十分大きいし、熱回復も十分に早いし、こて本体も十分軽量です。ステーション型でないと困る！……ということは、まずありません。私もステーション型のはんだごてを一台所有し使用していますが、</span><strong><span>一般的な電子工作用途であれば、手元内蔵式のはんだごてを使ってステーション型と同程度の質ではんだ付けをすることができる</span></strong><span>と思います。</span></p><p><span>大学などの設備更新で除却されたお下がりをもらう機会があったり、オークションサイトで安価に購入できそうな場合には、ステーション型でもよいと思います。そのような場合、もちろん動作の保証は無いので、ご注意ください。</span></p><p>&nbsp;</p><h2 id='一緒に必要な最低限の道具について'><span>一緒に必要な、最低限の道具について</span></h2><p><span>はんだ付けに必要な道具については、以下のページが参考になります。</span></p><p><a href='https://handa-craft.hakko.com/support/index.html' target='_blank' class='url'>https://handa-craft.hakko.com/support/index.html</a></p><p><span>ところで、温調はんだごてを用意したなら、それに付随して揃えるものについて注意すべきことがあります。</span></p><p><span>まず、温調であるなしに関わらず</span><strong><span>こて台</span></strong><span>は必ず一緒に用意しなくてはいけません。こて台にはこて先クリーナーがついていると思いますが、温調ごてを使う場合は</span><strong><span>スポンジ式ではなくワイヤー式のクリーナー</span></strong><span>を用意するとよいです。温調はんだごては温度を一定に保つことができるので、濡らしたスポンジはもはや不要。クリーニングワイヤーに数回ザクザクとこて先を刺すだけで、手軽に、かつ温度を下げることなく小手先をきれいにできます。</span></p><p><span>はんだは、</span><strong><span>直径0.8〜1.0mmのヤニ入りはんだ</span></strong><span>を用意しましょう。ヤニ入りはんだは、はんだ線の中にフラックスが充填されています。このフラックスが無いと、溶けたはんだはうまく流れず、きれいなはんだ付けができません。ヤニなしの線はんだは、主に金属を接合するのに使われるもので、使う際には別に金属用のフラックスを用意するものです。電子工作用のものではありません。</span></p><p><span>リワーク（修正や修理、洗浄のため、一度取ってつけ直す）の際には、</span><strong><span>はんだ吸い取り線</span></strong><span>が必要になります。用意していないと、間違えてはんだ付けした際に修正ができないので、必ず用意しましょう。はんだを除去したい部分の上に吸い取り線を乗せ、その上からこてで温めると、はんだが吸い取られていきます。つけたはんだを取るものには、吸い取り線と吸い取り器の2つがあります。吸い取り器は特に多くのはんだを取り去る場合に有効ですが、無くても吸い取り線で代用できます。逆に吸い取り器だけで吸い取り線の代用にはならないので、注意しましょう。</span></p><p>&nbsp;</p><p>&nbsp;</p><h2 id='こて先チップ）変更のススメ'><span>こて先（チップ）変更のススメ</span></h2><p><span>さて、環境は確かにこれで十分なのですが、さらにひと工夫……目的に合わせた形状のこて先に付け替えることで、より速やかに、質の良いはんだ付けが可能になります。</span></p><p><span>こて先の種類と使い方、選定などについては、HAKKOのWebサイトに詳しい話があります。</span></p><p><a href='https://www.hakko.com/japan/support/maintenance/detail.php?seq=71' target='_blank' class='url'>https://www.hakko.com/japan/support/maintenance/detail.php?seq=71</a></p><p><span>　一般的なはんだごてについているこて先は、いわゆる「丸くなった鉛筆の先のような形」のB型と呼ばれるものです。このこて先には向きがなく、初めて触る人でも扱いやすいという特徴があります。一方で、「器用貧乏」「だいたいのものに点接触しかできない」という欠点があります。そもそもはんだ付けは、はんだごてから対象物へ熱を伝える必要がありますから、点より線、線より面で接触するほうが効率が良いのは、当然のことです。</span></p><p><span>いろいろ試して自分の使いやすいものを見つけること、用途別に複数のチップを用意するのが最終的には望ましいのですが、私が電子工作向けにまずオススメするこて先は、</span><strong><span>2Cと呼ばれるタイプ</span></strong><span>です。一般的なユニバーサル基板やプリント基板のスルホール実装をやるとして、1Cでは先端が小さすぎて加熱しづらく、3Cは大きすぎて基板を痛めたりブリッジの原因になり得ます。私が普段使いするはんだごてにも、2Cのチップがつけっぱなしになっています。</span></p><p><span>最初は慣れるまで少し落ち着かないかもしれませんが、すぐ慣れます。そして慣れるとB型には戻れなくなります。</span></p><p>&nbsp;</p><p>&nbsp;</p><p><span>おすすめのはんだ付け機材</span></p><ul><li><span>温調はんだごて　HAKKO FX-600</span>
+<a href='https://www.amazon.co.jp/dp/B076KMS5CV/' target='_blank' class='url'>https://www.amazon.co.jp/dp/B076KMS5CV/</a>
+<span>説明は前述の通り。</span></li><li><span>こて先 2C型 FX-600/FX-8801/FX-8803用</span>
+<a href='http://www.amazon.co.jp/dp/B004OR7UBM' target='_blank' class='url'>www.amazon.co.jp/dp/B004OR7UBM</a>
+<span>FX-600適合の2C型チップ。チップははんだごての型番やメーカー毎に適合品が違うので注意。</span></li><li><span>こて台 FX-600/FX-601/PRESTO/DASH用 633-01</span>
+<a href='http://www.amazon.co.jp/dp/B000TGNWCS' target='_blank' class='url'>www.amazon.co.jp/dp/B000TGNWCS</a>
+<span>ワイヤークリーナー付きこて台。gootの同等品はスポンジクリーナーとワイヤークリーナーの両方が使えるようになっているが、温調ごてを使っていてスポンジクリーナーが必要になったためしがない。</span></li><li><span>goot(グット) はんだ吸取線 2.0mm幅 CP-20Y</span>
+<a href='http://www.amazon.co.jp/dp/B001D7JEIS' target='_blank' class='url'>www.amazon.co.jp/dp/B001D7JEIS</a>
+<span>つけたはんだをとるための吸い取り線。通称ウィック。使ったところをニッパーで切って捨てる消耗品。吸い取り器がなくても吸い取り線だけあれば、リワークの時に困ることはない。</span></li><li><span>goot(グット) はんだ吸取器 GS-108</span>
+<a href='http://www.amazon.co.jp/dp/B0016V5KHU' target='_blank' class='url'>www.amazon.co.jp/dp/B0016V5KHU</a>
+<span>つけたはんだをとるための吸い取り器。通称スッポン。空気ごと勢いよく吸入することではんだを取り去る。端子台の接続部など、大量のはんだを取り去るのに有効だが、完全にきれいにして素子を外すためには吸い取り線が必要になることが多い。</span></li><li><span>白光(HAKKO) こて先ポリッシャー ケミカルペースト</span>
+<a href='http://www.amazon.co.jp/dp/B002MRR1QA' target='_blank' class='url'>www.amazon.co.jp/dp/B002MRR1QA</a>
+<span>酸化・劣化して黒くなったこて先を新品同様に復活させるためのペースト。gootは「チップリフレッサー」という名前で販売している。酸化物を除去するための薬品とはんだを混ぜてあるので、ワイヤークリーナーできれいにしたこて先を、熱い状態のまま数秒浸すだけで復活できる。使用後には普段使っているはんだ線で再度コーティングしておくこと。また、ボコボコになるほどの重度のさび付きの場合は、先にヤスリをかけて酸化物を削り取っておかないと復活できない。</span></li><li><span>ケイバ(KEIBA) プロホビー ニッパー HNC-D04</span>
+<a href='http://www.amazon.co.jp/dp/B002AW3C2E' target='_blank' class='url'>www.amazon.co.jp/dp/B002AW3C2E</a>
+<span>「この品質のニッパーがこの値段で！」とよく言われるマルト長谷川のKEIBAシリーズ。刃はCR-V70C。同じ刃の同社製品で握り部分がもう少し安い作りのマイクロニッパーなどもあるが、100円〜200円くらいしか値段が変わらない。もちろん銅線はOKだが、鋼線やピアノ線は刃が欠けるので切らないように。（安くないニッパーを選ぶ際には、必ずメーカーサイトでどこまで硬いモノを切って良いのか確認するようにしよう。）正直、ニッパーについては安価なものを使い倒すのもよいと思う。</span></li><li><span>ケイバ(KEIBA) プロホビー ラジオペンチ 溝なし HLC-D14</span>
+<a href='http://www.amazon.co.jp/dp/B002AVTEEU' target='_blank' class='url'>www.amazon.co.jp/dp/B002AVTEEU</a>
+<span>ニッパーと同じKEIBAシリーズのラジオペンチ。電子工作では細い線や小さい部品も扱うので、溝なしを選んだ方がよいと思っている。ラジオペンチについては、安価な品はかみ合わせが悪くて使いづらいことがあるので注意。</span></li><li><span>ホーザン(HOZAN) ワイヤーストリッパー 細線用 P-967</span>
+<a href='http://www.amazon.co.jp/dp/B004OR7BQ6' target='_blank' class='url'>www.amazon.co.jp/dp/B004OR7BQ6</a>
+<span>ビニル電線の被覆を剥くのはハサミやカッターでもできるが、ワイヤーストリッパーを使うと素早く確実、かつ芯線を傷つけることがない。カッター部はハサミのようなすれ違い式になっている。ニッパーは刃を合わせて切る食い切り式であるため、必要に応じて使い分けられる。各部の配置が変更になった新型のP-977もあります。</span></li><li><span>goot(グット) 鉛入りはんだ Φ1.0mm スズ60%/鉛40% 100gリール巻 ヤニ入り SE-06010</span>
+<a href='http://www.amazon.co.jp/dp/B001PR1L32' target='_blank' class='url'>www.amazon.co.jp/dp/B001PR1L32</a>
+<span>ヤニ入り共晶はんだ。有鉛なので注意。</span></li></ul><p>&nbsp;</p><p>&nbsp;</p><p><span>さいごに</span></p><p><span>　一昔前は、そうではなかったかもしれません。ですが今やgootやHAKKOの企業努力により、きちんと道具を選んで適切に使う知識さえあれば、十分な品質のはんだ付けが誰でもできる時代になったと思います。</span></p></div></div>
+</body>
+</html>
