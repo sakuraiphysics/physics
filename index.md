@@ -1,43 +1,37 @@
-# Sakurai Physics
+## Sakurai Physics
 
-　櫻井が、主に高校物理について書きためたものを置いておくところです。このWebサイトはGitHub Pagesを利用して公開しています。
+You can use the [editor on GitHub](https://github.com/sakuraiphysics/physics/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
+Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
+### Markdown
 
-[有効数字](./yuukousuuji.html)
+Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
-[真値と誤差と不確かさ](./uncertainly.md)（執筆中）
+```markdown
+Syntax highlighted code block
 
+# Header 1
+## Header 2
+### Header 3
 
+- Bulleted
+- List
 
-[Scienceで扱うベクトルの基本](./vector.md)（改訂予定）
+1. Numbered
+2. List
 
-[三角比と三角関数](sankakukansu.html)
+**Bold** and _Italic_ and `Code` text
 
+[Link](url) and ![Image](src)
+```
 
+For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-[運動を表現する](./motion.md)（執筆中）
+### Jekyll Themes
 
-[運動の第1法則](./lowofinertia.md)（執筆中）
+Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sakuraiphysics/physics/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
 
-[作用反作用の法則](./reaction.html)
+### Support or Contact
 
-
-
-[圧力と浮力](./pressure.md)（執筆中）
-
-
-
-[振動（波動の学習の前に）](./oscillation.html)（執筆中）
-
-
-
-[Google Docs でPDFファイルを作成して提出する方法](./howtopdf.md)
-
-[演習問題への取り組み方](./howtosolveit.md)
-
-
-
-[物理Webページリンク集](./webpages.md)
-
-[物理じゃないWebページリンク集](./webpages2.md)
+Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
