@@ -10,7 +10,7 @@
 
 まず、 $x$ 軸のみの、一次元の座標をつくる。
 
-![](C:\Users\pas2_\Documents\project\physics\pictures\motion1.png)
+![](.\pictures\motion1.png)
 
 ### 位置をベクトルで表現する
 
@@ -20,7 +20,7 @@
 
 　ある位置 $P_1$ にいたボブ君が移動し、今 $P_2$ にいる。 $P_1$ の $x$ の値は $x_1$ 、 $P_2$ の $x$ の値は $x_2$ であるとしよう。
 
-![](C:\Users\pas2_\Documents\project\physics\pictures\motion2.png)
+![](.\pictures\motion2.png)
 
 
 
@@ -28,7 +28,7 @@
 $$
 \Delta x = x_2 - x_1
 $$
-![](C:\Users\pas2_\Documents\project\physics\pictures\motion3.png)
+![](.\pictures\motion3.png)
 
 さて、変位はベクトルとして表現できたが、 $P_1$ および $P_2$ の位置についてもベクトルで表現できることが分かるだろうか。原点 $\mathrm{O}$ に対する $P_1$ および $P_2$ の位置を表すベクトルを、それぞれ $\vec{x_1}$ 、
 
