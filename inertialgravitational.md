@@ -128,7 +128,7 @@ $$
 
 $$
 \begin{eqnarray}
-W &=& 1\,\mathrm{kgw} \\ \\ m_G &=& 1\,\mathrm{kg} \\ \\ よって \;W &\neq& m_G
+W &=& 1\,\mathrm{kgw} \\ m_G &=& 1\,\mathrm{kg} \\ よって \;W &\neq& m_G
 \end{eqnarray}
 $$
 
